@@ -9,7 +9,7 @@ const server = http.createServer((req, res) => {
     });
 
     const response = {
-        message: "Hello from GitHub Actions POC!",
+        message: "Hello from GitHub Actions CI/CD Pipeline!",
         application: "Node.js Sample Application",
         status: "success"
     };
