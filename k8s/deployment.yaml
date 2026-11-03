@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
         - name: github-actions-poc
-          image: github-actions-poc:v1
+          image: ghcr.io/lravikumarl112-tech/github-actions-poc:latest
           imagePullPolicy: Never
 
           ports:
