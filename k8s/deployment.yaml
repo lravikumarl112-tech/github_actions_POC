@@ -1,0 +1,30 @@
+
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: github-actions-poc
+  namespace: github-actions-poc
+
+spec:
+  replicas: 1
+
+  selector:
+    matchLabels:
+      app: github-actions-poc
+
+  template:
+    metadata:
+      labels:
+        app: github-actions-poc
+
+    spec:
+      containers:
+        - name: github-actions-poc
+          image: github-actions-poc:v1
+          imagePullPolicy: Never
+
+          ports:
+            - containerPort: 3000
+              name: http
+
